@@ -1,14 +1,18 @@
-require ( './helpers.js' );
+// Importing helpers.js file
+const helpers = require('./helpers');
 
-const fs = require('fs')
-const path = require('path')
+// Importing necessary modules
+const fs = require('fs');
+const path = require('path');
 
-const js = fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8')
+// Reading the content of index.js file
+const js = fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8');
 
+// Describe block for index.js
 describe('index.js', function () {
   describe('companyName', function () {
     it('is set as Scuber', function () {
-      expect(companyName).to.equal('Scuber');
+      expect(helpers.companyName).to.equal('Scuber');
     });
 
     it('is defined as a const', function () {
@@ -18,7 +22,7 @@ describe('index.js', function () {
 
   describe('mostProfitableNeighborhood', function () {
     it('is declared as equal to Chelsea', function () {
-      expect(mostProfitableNeighborhood).to.equal('Chelsea');
+      expect(helpers.mostProfitableNeighborhood).to.equal('Chelsea');
     });
 
     it('is defined using let', function () {
@@ -28,7 +32,7 @@ describe('index.js', function () {
 
   describe('companyCeo', function () {
     it('is declared as equal to Susan Smith', function () {
-      expect(companyCeo).to.equal('Susan Smith');
+      expect(helpers.companyCeo).to.equal('Susan Smith');
     });
 
     it('is defined using let', function () {
